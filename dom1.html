@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hii</h1>
+    <button onclick="change()">click</button>
+    <input type="text" onkeyup="validate()" id="number"/>
+</body>
+<script>
+    function change(){
+        document.getElementById("h1").innerHTML="Hello";
+
+    }
+    function validate(){
+        let number=document.getElementById("number").value;
+        alert(number)
+    }
+</script>
+</html>
