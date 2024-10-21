@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+   
+        <input type="number" id="a" />
+        <input type="number" id="b" />
+        <input type="number" id="result" />
+        <button  onclick="getsum();">+</button>
+     <ol id="ol">
+        <li>1</li>
+        
+     </ol>
+    </div>
+ 
+    <script>
+       let paragrapg=document.createElement("input");
+       paragrapg.id="newp";
+       paragrapg.type="text";
+       paragrapg.value="Lubna";
+       document.body.append(paragrapg);
+function getsum(){
+    ol.before('after'); 
+  ol.after('before'); 
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = '0';
+  ol.prepend(liFirst); 
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = '2';
+  ol.append(liLast); 
+
+
+}
+
+for(let i=1 ;i<=3 ;i++){
+    let paragraphnew=document.createElement("p");
+    paragraphnew.innerHTML=i;
+    document.body.append(paragraphnew);
+}
+
+    </script>
+</body>
+</html>
