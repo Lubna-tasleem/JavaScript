@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Fill The Form</p>
+        <p>Fill all Mandatory fields</p>
+        <div class="intro">
+
+        </div>
+        <div class="intro">
+
+        </div>
+        <input type="text" name="name" id="Firstname" value="Lubna" />
+        <input type="text" name="name" id="Lastname" value="Tasleem" />
+
+    </div>
+    <div>
+        <form id="formid">
+            <input type="text" name="name" id="age" value="24" />
+            <input type="text" name="name" id="gender" value="Female" />
+                </form>
+    </div>
+    <div class="formvalues">
+
+    </div>
+    <script>
+        let vr=document.getElementsByTagName("p");
+        vr[1].innerHTML="fill the mandatory inputs";
+        alert(vr[1].innerHTML);
+        let clasval=document.getElementsByClassName("intro");
+        clasval[0].innerHTML="hello";
+        alert(clasval[0].innerHTML);
+        var myval=document.getElementById("Firstname").value;
+        alert(myval);
+        var byname=document.getElementsByName("name");
+        alert(byname[1].value);
+        let formval=document.forms['formid'];
+        alert(formval[0].value)
+        let text = "";
+for (let i = 0; i < formval.length ;i++) {
+  text += formval[i].value + "<br>";
+}
+document.getElementsByClassName("formvalues").innerHTML = text;
+        
+    </script>
+</body>
+</html>
