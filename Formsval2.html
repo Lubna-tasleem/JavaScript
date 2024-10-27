@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    <form method="post" action="/" id="form">
+        <div>
+            <label>First Name:</label>
+            <input name="first_name" id="first_name" type="text" />
+            <span id="error" style="color:red"></span>
+            <label>Last Name</label>
+            <input name="last_name" id="last_name" type="text"/>
+        </div>
+        <br>
+        <div>
+            <label>Phone Number:</label>
+            <input type="tel" id="mobile" name="mobile" />
+            <label>Gender:</label>
+            <input type="radio" id="female" name="gender" />Female <br>
+            <input type="radio" id="male" name="gender" />Male <br>
+        </div>
+        <div>
+            <label>State:</label>
+            <select id="state" name="state">
+                <option>select state</option>
+                <option>Telangana</option>
+                <option>Andhra</option>
+            </select>
+            <label>Address:</label>
+            <input type="text" id="add" name="address"/>
+        </div>
+        <div>
+            <label>Date of Birth:</label>
+            <input type="date" id="date" name="date" />
+        </div>
+        <input type="button" value="submit" onclick="validate()" />
+    </form>
+   </div>
+   <script>
+    function validate(){
+let name=document.getElementById("first_name").value;
+if(name==null || name==""){
+    name
+    document.getElementById("error").innerHTML="fill the form *"
+  
+}
+    }
+   </script>
+</body>
+</html>
