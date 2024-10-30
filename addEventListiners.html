@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <button id="btn1">Move IN</button>
+    <button id="btn3">ADD</button>
+
+    <p id="p1"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            alert("hi")
+        });
+
+        document.getElementById("btn1").addEventListener("mousemove",givealert);
+        function givealert(){
+            alert(Date());
+        }
+let x=document.getElementById("btn3");
+x.addEventListener("click",showText);
+x.addEventListener("mouseover",showMouseove);
+x.addEventListener("mouseout",showmouseout)
+function showText(){
+    document.getElementById("p1").innerHTML+="mouse clciked! <br>"
+}
+
+function showMouseove(){
+    document.getElementById("p1").innerHTML+="mouse moved! <br>"
+
+}
+
+
+function showmouseout(){
+    document.getElementById("p1").innerHTML+="mouse out! <br>"
+
+}
+
+    </script>
+</body>
+</html>

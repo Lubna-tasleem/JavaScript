@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="p1"></p>
+        <button id="btn">click</button>
+        <button id="btn1" onclick="showdata()">display</button>
+    </div>
+    <script>
+document.getElementById("btn").addEventListener("click",function(){
+
+    let http=new XMLHttpRequest();
+
+    http.onload=function(){
+        document.getElementById("p1").innerHTML=this.responseText;
+    }
+http.open("GET","data.json");
+http.send();
+
+});
+
+function showdata(){
+    let xp=new XMLHttpRequest();
+    xp.onreadystatechange=function(){
+        if(this.status==200 || this.readyState==4){
+            document.getElementById("p1").innerHTML=this.responseText;
+
+        }
+    }
+
+    xp.open("GET","document.text");
+xp.send();
+}
+    </script>
+</body>
+</html>

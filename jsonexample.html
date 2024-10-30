@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+   <script>
+    let myobj='{"name":"Lubna","Age":24,"cars":["hi"]}';
+    let x=JSON.parse(myobj);
+    document.getElementById("p1").innerHTML=x.cars[0];
+   </script> 
+
+</body>
+</html>

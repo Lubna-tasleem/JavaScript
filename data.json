@@ -1,0 +1,19 @@
+
+
+
+
+{
+    "name":"Lubna",
+      "Age":24,
+      "perosnalDetails":{
+        "heigh":5.1,
+        "weight":65,
+        "text":{
+            "a":1,
+            "b":2
+        }
+      } ,
+      "cities":["hyderabad","Khammam"]
+
+}
+
