@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+</head>
+<body>
+    <div style="text-align: center;width: fit-content;height: fit-content;background-color: brown;">
+        <form method="post" action="/#" id="form">
+            <div>
+                <h1>Personal Details</h1>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" id="name" required="true" placeholder="Fill the name" autocomplete="off"/>
+                </div>
+                <br>
+                <div>
+                    <label>Date OF Birth:</label>
+                    <input type="date" id="dob" required="true" placeholder="Fill the Date"/>
+                </div>
+                <br>
+                <div>
+                    <label>Email</label>
+                    <input type="email" id="mail" required="true" placeholder="Fill the mail"/>
+                </div>
+                <br>
+                <div>
+                    <label>Phone no:</label>
+                    <input type="tel" id="phn" required="true" placeholder="Fill the Mobile number"/>
+                </div>
+                <br>
+                <div>
+                    <input type="button" value="submit" id="btn">
+                </div>
+            </div>
+
+        </form>
+    </div>
+<script>
+    $(document).ready(function(){
+$("#btn").click(function(){
+    let formvalues=$("#form input");
+    for(let i=0;i<formvalues.length;i++){
+        if(formvalues[i].value==""){
+            alert("fill the "+formvalues[i].id);
+        }
+    }
+})
+    });
+</script>
+
+</body>
+</html>

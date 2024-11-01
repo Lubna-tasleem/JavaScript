@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <p id="p">Hello</p>
+    <input id="name" type="text"/>
+    <button class="btn">clcick</button>
+    <script>
+      $(document).ready(function(){
+        $("#p").hide();
+      });
+      $(".btn").click(function(){
+        alert("");
+      });
+      $(".btn").hover(function(){
+        alert("hover");
+      }),
+
+function(){
+    alert("hover out");
+};
+
+$("#name").focus(function(){
+    $(this).css("background-color", "#cccccc");
+});
+    </script>
+</body>
+</html>
