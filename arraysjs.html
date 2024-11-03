@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        let arr=new Array(1,7,4)// synatx let varaible=new Array();
+        //let x =[]
+        for(let x of arr){
+           document.getElementById("p1").innerHTML+=x; 
+        }
+        console.log(arr.sort());
+        console.log(arr.indexOf(7));
+        arr.toString();
+        console.log(arr);
+        console.log(typeof arr)
+        console.log(arr.push(5));
+        console.log(arr);
+        console.log(arr.filter())
+    </script>
+</body>
+</html>

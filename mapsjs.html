@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const map=new Map([
+            ["name","Lubna"],
+            ["age",24]
+        ]);
+        map.forEach(function(key,value){
+            console.log(key+"---->"+value);
+        });
+
+        for(const x of map.entries()){
+            console.log(x);
+        }
+        console.log(map.has("age"));
+        map.set("dob","04-04-2000");
+        console.log(map);
+        console.log(map.get("dob"));
+        console.log(map.delete("dob"));
+        console.log(map);
+        map.clear();
+        console.log(map);
+    </script>
+</body>
+</html>

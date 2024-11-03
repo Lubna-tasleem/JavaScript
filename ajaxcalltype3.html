@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+</head>
+<body>
+    <p id="p1"></p>
+    <button id="btn">click</button>
+    <script>
+        $(document).ready(function(){
+        $("#btn").click(function(){
+            $.ajax({
+                url:"data.json",
+                method:"GET",
+                success:function(data,status){
+                    alert(data["name"]);
+                }
+            })
+        })
+
+        $("#btn").mouseover(function(){
+            $.ajax({
+                url:"data.json",
+                method:"GET"
+            }).done(function(data){
+                alert(data.name)
+$("#p1").html(data.name);
+            })
+        })
+      })
+    </script>
+</body>
+</html>

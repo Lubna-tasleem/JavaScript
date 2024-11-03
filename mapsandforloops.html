@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--map stores key and value pairs as synatx  const x=new Map();-->
+    <!-- const ma=new Map([
+     ])-->
+     <script>
+        const fruits=new Map([
+            ["apples",30],
+            ["mangoes",10],
+        ]);
+        console.log("before setting new value-->"+fruits);
+fruits.set("pine-apple",15);
+console.log(fruits);
+console.log(fruits.get("pine-apple"));
+console.log(fruits.has("grapes"));
+console.log(fruits.delete("apples"));
+console.log(fruits);
+fruits.set("apple",30);
+console.log(fruits);
+fruits.forEach(function(key,value){
+    console.log(key+"--->"+value);
+})
+
+for(const x of fruits.entries()){
+    console.log(x);
+}
+ for(const x of fruits.keys()){
+    console.log(x);
+ }
+for (const x of fruits.values()){
+    console.log(x);
+}
+fruits.clear();
+console.log(fruits);
+     </script>
+</body>
+</html>
